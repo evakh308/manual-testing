@@ -1,0 +1,87 @@
+Some examples of bug reports written by me. 1st - Functional bug, 2nd - UI/UX bug, 3rd - Logic bug, 4th - User Experience bug, 5th - Compatibility bugs, 6th - Performance bug 
+
+
+#1 Functional bug
+Title: Language changes are not completely supported
+Steps to reproduce:
+1. Open the link
+2. Change the language to Greek and refresh the page
+3. Navigate to the "Discovery" page
+4. Explore the behavior of the website
+Actual result: On the landing page, language changes are applied inconsistently. Titles are in English, and paragraphs are in the set language. Page "Discover" always appears in English. 
+The home page doesn't support language changes
+Expected result: Language change should change across the page and be consistent
+Severity: High
+Priority: High
+Attachment: Screenshot/video recording attached
+
+#2 UI/UX bug
+Title: Toggle password visibility is missing
+Steps to reproduce:
+  1. Open the link
+  2. Fill the password field with the data "secret_sauce"
+Actual result: User is unable to check the spelling of the password
+Expected result: There should be an eye icon inside the password field that allows the user to toggle password visibility 
+Severity: Low
+Priority: Medium
+Attachment: Screenshot/video recording attached
+
+#3 Logic bug
+Title: The Website accepts future birth year
+Steps to reproduce:
+1. Open the link
+2. Go to Sign Up
+3. Fill the birth date fields with data: Month: November, Day:23rd, Year:2028
+4. Click on the "Submit" button
+Actual result: The system allows the user to select the birth year in the future (e.g., 2028)
+Expected result: The system should reject selecting a future date as a valid date of birth and display an error message
+Severity: Medium
+Priority: Medium
+Attachment: Screenshot/video recording attached
+
+#4 User experience bug
+Title: After successfully signing up, the page doesn't directly redirect to the profile page
+Steps to reproduce:
+1. Open the link
+2. Go to the Sign Up page
+3. Fill the credentials with the valid data
+4. Click on the "Sign Up" button - no response
+5. Click on the "Sign Up" button a second time
+6. The error message "Email already exists" appears
+7. Go back to the landing page
+8. Click on Login
+9. Fill fields with the same valid data
+10. Click on the "Login" button - redirects to the Profile page
+Actual result: After successfully signing up, the user needs to go back to the landing page and log in manually to access the profile page
+Expected result: The Sign Up page should automatically redirect to the profile page after successful signing up
+Severity: High
+Priority: High
+Attachment: Screenshot/video recording attached
+
+#5 Compatibility bugs
+Title: Website opens zoomed in on mobile devices
+Steps to reproduce:
+1. Open the website on mobile
+2. Observe the page
+Actual result: The web page appears zoomed in
+Expected result: The website should adjust the screen resolution and display the page content fully
+Environment: iPhone 13 ProMax, Google Chrome extension v. 393
+Severity: High
+Priority: High
+Attachment: Screenshot/video recording attached
+
+#6 Performance bug
+Title: Game performance is not consistent
+Steps to reproduce: 
+1.	Open the link
+2.	Click on Play now
+3.	Open the DevTools
+4.	Navigate to the Performance tab
+5.	Click on the recording button(play icon at upper lift corner)
+6.	Play for 20-30 sec
+7.	Stop the record
+Actual result: The Game has noticeable fps drops and delayed loading
+Expected result: The game should have stable fps and frame rate, and load accordingly 
+Severity: High
+Priority: High
+Attachment: Screenshot/video recording attached
