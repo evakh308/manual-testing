@@ -1,0 +1,116 @@
+Test cases for the website - https://turbogames.io/game/aero
+Test cases №1 -  №5 covers the bet placement functionality. Test cases №6 - Performance issue and №7 - UI issue
+
+#1
+Title: Verify the balance changes after placing a bet and losing
+Type: Functional
+Preconditions: Link to the game, starting balance 1000$
+Steps to reproduce:
+  1. Open the link
+  2. Click on "Play now"
+  3. Accept that user is over 18 years old
+  4. Click on input field near first "Place bet" button
+  5. Place 20$
+  6. Click on "Ok" button
+  7. Click on "Place bet"
+  8. Lose the game
+Expected result: The balance is 980$. Lost 20$
+Status: Passed
+Priority: High
+
+#2
+Title: Verify the balance changes after placing a bet and wining
+Type: Functional
+Preconditions: Link to the game, starting balance 100$
+Steps to reproduce:
+  1. Open the link
+  2. Click on "Play now"
+  3. Accept that user is over 18 years old
+  4. Click on input field near first "Place bet" button
+  5. Place 20$
+  6. Click on "Ok" button
+  7. Click on "Place bet"
+  8. Click on "Cash out" button anytime is bigger the given bet amount
+  8. Win the game
+Expected result: The balance is 1007$. Won 27$
+Status: Passed
+Priority: High
+
+#3
+Title: Verify the maximum/minimum amount of bet
+Type: Functional
+Preconditions: Link to the game, balance at least 250$
+Steps to reproduce:
+  1. Open the link
+  2. Click on "Play now"
+  3. Accept that user is over 18 years old
+  4. Click on input field near first "Place bet" button
+  5. Place 200$
+  6. Click on "Ok" button
+  7. Observe the behavior
+  8. Delete bet using keyboard
+  9. Place negative bet (e.g., -2$)
+  10. Observe the behavior
+Expected result: Its not possible to put bet amount more then 100$ and less then 0.1$
+Status: Passed
+Priority: High
+
+#4
+Title: Verify bet amount changes: increase/decrease
+Type: Functional
+Preconditions: Link to the game, balance at least 100$
+Steps to reproduce:
+  1. Open the link
+  2. Click on "Play now"
+  3. Accept that user is over 18 years old
+  4. Default bet amount 1$
+5. Press "+" button till balance is 10$
+6. Press "+" button till balance is 100$
+7. Press "-" button till balance is 1$
+8. Observe the behavior of "+","-" buttons
+Expected result: If the bet amount is from 1$ to 9$, then the bet increases/decreases by 1$ each click. 
+If the bet amount is from 10$ to 100%, then the bet amount increases/decreases by 10% each click
+Priority: Low
+
+#5
+Title: Verify click on "Place bet", "Cancel" and "Cash out" buttons triggers corresponding sound 
+Type: Functional
+Preconditions: Link to the game, available sound output
+Steps to reproduce:
+  1. Open the link
+  2. Click on "Play now"
+  3. Accept that you are over 18 years old
+  4. Click on "Place bet" button - bet placement sound plays
+  5. Click on "Cancel" button - cancellation sound plays
+  6. Click on "Cash out" button - plays the cash out sound
+Expected result: Buttons "Place bet", "Cancel" and "Cash out" have separate audio feedback 
+Status: Passed
+Priority: Medium
+
+#6
+Title: Verify performance of the game
+Type: Performance
+Preconditions: Link to the game, opened DevTools, PC with stable internet and Google Chrome web v. 138.0.7204.97
+Steps to reproduce:
+  1. Open the link
+  2. Click on "Play now"
+  3. Accept that you are over 18 years old
+  4. Open the DevTools
+  5. In DevTools, open the Performance tab
+  6. Start the recording by click on the play icon on upper left corner inside of DevTools
+  7. Play the game for 20-30 sec
+  8. Stop the recording
+Expected result: No noticeable lag, frame and fps rate are stable
+Status: Failed
+Priority: High
+
+#7
+Title: Verify preview picture of the game is visible on mobile devices
+Type: Visual/UI
+Preconditions: Link to the game, iPhone 13 ProMax, Google Chrome mobile v.375.1.776343893 
+Steps to reproduce:
+  1. Open the link
+  2. Observe the layouts of the game 
+Expected result: Game preview is visible in a center of the page
+Status: Failed
+Priority: Medium
